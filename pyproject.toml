@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moses-fs"
+version = "0.1.0"
+description = "MOSES.fs semantic file organizer"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "psutil",
+    "watchdog",
+]
+
+[project.scripts]
+moses = "moses.cli:main"
+
+[tool.setuptools]
+packages = ["moses", "moses.ingestion", "moses.indexing"]
